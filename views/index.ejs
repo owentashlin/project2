@@ -3,23 +3,24 @@
 
 <head>
   <title>
-    <%= title %>
+    <%= 'Project Library of DOOOOOOOM' %>
   </title>
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 
 <body>
-  <p>Welcome to <%= title %>
+  <p>Welcome to <%= 'Project Library of DOOOOOOOM' %>
   </p>
   <ul>
     <li><a href="/">Home</a></li>
     <% if (user) { %>
-      <li><a href="/private">Private Page</a></li>
+      <li><a href="/private">Your Library</a></li>
       <li><a href="/logout">Log Out</a></li>
       <% } else { %>
         <li><a href="/auth/google">Log In</a></li>
         <% } %>
   </ul>
+    <p>Log in to View Your Library</p>
 </body>
 
 </html>
