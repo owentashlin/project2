@@ -6,11 +6,11 @@ function index(req, res) {
     res.redirect('../index')
 }
 
-// function addProject(req, res) {
-//     res.send('add project')
-// }
+function addProject(req, res) {
+    res.render('projects/add')
+}
 
 module.exports = {
     index,
-    //addProject
+    addProject
 }
