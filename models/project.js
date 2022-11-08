@@ -12,8 +12,7 @@ const projectSchema = new Schema({
     name: String,
     type: String,
     sourceLink: String,
-    status: Boolean,
-    finished: Boolean,
+    status: String,
     supplies: [supplySchema]
 }) 
 

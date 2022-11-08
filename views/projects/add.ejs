@@ -8,9 +8,11 @@
 </head>
 <body>
    <h1>Create New Project</h1> 
-   <form action="/addProject" method="POST">
-    <label>Project Type:</label>
+   <form id="new-project-form" action="/" method="POST">
+    <label>Project Name:</label>
         <input type="text" name="name" required>
+        <br></br>
+        <label>Method:</label>
         <select name="type" required>
             <option value=""></option>
             <option value="knit">Knit</option>
@@ -18,8 +20,20 @@
             <option value="spin">Spin</option>
             <option value="weave">Weave</option>
         </select>
+        <br></br>
+        <label>Source:</label>
         <input type="text" name="sourceLink" required>
-        
+        <br></br>
+        <label>Status:</label>
+        <select name="status" required>
+            <option value=""></option>
+            <option value="waiting">Thinking about it...</option>
+            <option value="started">Started</option>
+            <option value="finished">Finished</option>
+            <option value="on-hold">On Hold</option>
+        </select>
+        <br></br>
+        <input type="submit" value="Add to Library">
    </form>
 </body>
 </html>
