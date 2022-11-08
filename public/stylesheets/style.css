@@ -6,3 +6,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+table, th, td {
+  border: 1px dotted rgb(72, 71, 71);
+  margin: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.navbar {
+  justify-content: end;
+  list-style: none;
+  background: rgb(249, 247, 247);
+}

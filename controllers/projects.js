@@ -10,6 +10,10 @@ function addProject(req, res) {
     res.render('projects/add')
 }
 
+function showLibrary(req, res) {
+    res.render('projects/library')
+}
+
 function create(req, res) {
     //res.send('project saved')
     let project = new Project(req.body)
@@ -20,8 +24,17 @@ function create(req, res) {
     console.log(req.body)
 }
 
+function findAll(req, res) {
+    Project.find({}, function(err, projects) {
+        if (err) console.log('error, cannot retrieve project information')
+        res.render('projects/library', { projects: Project })
+    })
+}
+
 module.exports = {
     index,
     addProject,
-    create
+    create,
+    showLibrary,
+    findAll
 }
