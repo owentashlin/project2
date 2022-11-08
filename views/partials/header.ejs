@@ -13,9 +13,10 @@
 </head>
 <body>
     <ul class="navbar">
+        <img src="../images/noun-sheep-icon.png">
         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
             <% if (user) { %>
-                <li class="nav-item"><a class="nav-link" href="/private">Your Library</a></li>
+                <li class="nav-item"><a class="nav-link" href="/private">Bulletin Board</a></li>
                 <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
               <% } else { %>
                 <li class="nav-item"><a class="nav-link" href="/auth/google">Log In</a></li>

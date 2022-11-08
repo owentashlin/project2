@@ -15,7 +15,11 @@ table, th, td {
 }
 
 .navbar {
-  justify-content: end;
+  justify-content: start;
   list-style: none;
   background: rgb(249, 247, 247);
+}
+
+i {
+  align-self: start;
 }
