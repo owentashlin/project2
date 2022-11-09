@@ -9,7 +9,6 @@ function create(req, res) {
       project.supplies.push(req.body)      
       project.save(function(err) {
         res.redirect(`/projects/${project._id}`)
-        //res.send('project updated')
       })
     })
   }

@@ -37,3 +37,33 @@
     <br></br>    
   <button type="submit">Add Item</button>
 </form>
+<br></br>
+<% if (project.supplies.length) { %>
+    <table>
+        <h4>Project Supplies</h4>
+        <thead>
+            <tr>
+                <th>Description: </th>
+                <th>Type: </th>
+                <th>Owned: </th>
+                <th>Amount: </th>
+            </tr>
+        </thead>
+        <tbody>
+            <% project.supplies.forEach(function(p) { %>
+                <tr>
+                    <td><%= p.description %></td>
+                    <td><%= p.type %></td>
+                    <td><%= p.own %></td>
+                    <td><%= p.amount %></td>
+                </tr>
+         <% }) %>
+        </tbody>
+    </table>
+<% } else { %> 
+    <h4>Add supplies for your project with the form above</h4>
+    <% } %>
+
+</main>
+</body>
+</html>
