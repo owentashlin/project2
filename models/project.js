@@ -5,7 +5,8 @@ const Schema = mongoose.Schema
 const supplySchema = new Schema({
     type: Boolean,
     description: String,
-    amount: Number,
+    own: Boolean,
+    amount: String
     
 })
 
