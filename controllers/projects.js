@@ -27,9 +27,18 @@ function findAll(req, res) {
     })
 }
 
+function showDetail(req, res) {
+    //Project.findById(req.params.id, function() {
+        res.send('detail page')
+        // res.render('projects/detail', { name: 'Project Name', project })
+    //})
+    console.log("found detail")
+  }
+
 module.exports = {
     index,
     addProject,
     create,
-    findAll
+    findAll,
+    showDetail
 }

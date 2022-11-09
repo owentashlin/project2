@@ -10,8 +10,8 @@ const projectsCtrl = require('../controllers/projects')
 router.get('/index', projectsCtrl.index)
 router.get('/projects/add', projectsCtrl.addProject)
 router.get('/projects/library', projectsCtrl.findAll)
+router.get('/:id', projectsCtrl.showDetail)
 
 router.post('/', projectsCtrl.create)
-//router.get('/findAll', projectsCtrl.findAll)
 
 module.exports = router;
