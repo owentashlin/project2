@@ -28,10 +28,10 @@ function findAll(req, res) {
 }
 
 function showDetail(req, res) {
-    //Project.findById(req.params.id, function() {
-        res.send('detail page')
-        // res.render('projects/detail', { name: 'Project Name', project })
-    //})
+    Project.findById(req.params.id, function(err, project) {
+        if (err) console.log('error, cannot retrieve project information')
+        res.render('projects/detail', { name: 'Project Name', project })
+    })
     console.log("found detail")
   }
 

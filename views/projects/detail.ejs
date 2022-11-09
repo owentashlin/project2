@@ -3,17 +3,12 @@
 <table id="show-page">
     <thead>
         <tr>
-            <th>Project Name: </th>
-            <th>Source: </th>
+            <th><%= project.name %> </th>
+            <th><%= project.sourceLink %> </th>
         </tr>
     </thead>
     <tbody>
-        <% projects.forEach(function(p) { %>
-            <tr>
-              <td><%= p.name %></td>
-              <td><%= p.sourceLink %></td>
-        </tr>
-        <% }) %>
+        
     </tbody> 
 </table>
 <br></br>
