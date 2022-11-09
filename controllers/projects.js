@@ -14,7 +14,7 @@ function create(req, res) {
     let project = new Project(req.body)
     project.save(function(err){
         if (err) return console.log('error, cannot save new project')
-        else res.send('project added')
+        else res.redirect('projects/library')
     })
     console.log(req.body)
 }
