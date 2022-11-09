@@ -32,7 +32,6 @@ function showDetail(req, res) {
         if (err) console.log('error, cannot retrieve project information')
         res.render('projects/detail', { name: 'Project Name', project })
     })
-    console.log("found detail")
   }
 
 module.exports = {

@@ -4,7 +4,7 @@
     <thead>
         <tr>
             <th><%= project.name %> </th>
-            <th><%= project.sourceLink %> </th>
+            <th><%= project.sourceLink %></th>
         </tr>
     </thead>
     <tbody>
@@ -14,12 +14,12 @@
 <br></br>
 <h4>Project Supply List</h4>
 <br>
-<form action="/supplies" method="POST" autocomplete="off">
+<form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
   <label>What is it?</label>
-    <input type="text" name="supply">
+    <input type="text" name="description" required>
     <br>
   <label>It is a Tool?</label> 
-    <select name="Tool" required>
+    <select name="type" required>
         <option value=""></option>
         <option value="true">Yes</option>
         <option value="false">No</option>
