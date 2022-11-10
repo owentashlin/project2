@@ -1,69 +1,76 @@
 <%- include('../partials/header') %>
 <h2>Project Details</h2>
-<table id="show-page">
-    <thead>
-        <tr>
-            <th><%= project.name %> </th>
-            <th><%= project.sourceLink %></th>
-        </tr>
-    </thead>
-</table>
+
+<div class="detail-card">
+    <div class="container">
+      <h4 id="card-title" ><%= project.name %></h4>
+      <p class="cardp"><a href="<%= project.sourceLink %>">link to source</a></p>
+    </div>
+  </div>     
 
 <br></br>
 <a href="/projects/<%= project._id %>/update">Update Project 
 Details</a>
 <br></br>
 
-<h4>Project Supply List</h4>
-<br>
-<form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
-  <label>What is it?</label>
-    <input type="text" name="description" required>
-    <br>
-  <label>It is a Tool?</label> 
-    <select name="type" required>
-        <option value=""></option>
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select> 
-    <br>   
-  <label>Do you already have it?</label>      
-    <select name="own" required>
-        <option value=""></option>
-        <option value="true">Yes</option>
-        <option value="false">No</option>
-    </select>
-    <br>
-    <label>How much do you need?</label>
-        <input type="text" name="amount" required>
-    <br></br>    
-  <button type="submit">Add Item</button>
-</form>
-<br></br>
-<% if (project.supplies.length) { %>
-    <table>
-        <h4>Project Supplies</h4>
-        <thead>
-            <tr>
-                <th>Description: </th>
-                <th>Type: </th>
-                <th>Owned: </th>
-                <th>Amount: </th>
-            </tr>
-        </thead>
-        <tbody>
-            <% project.supplies.forEach(function(p) { %>
-                <tr>
-                    <td><%= p.description %></td>
-                    <td><%= p.type %></td>
-                    <td><%= p.own %></td>
-                    <td><%= p.amount %></td>
-                </tr>
-         <% }) %>
-        </tbody>
-    </table>
-<% } else { %> 
-    <h4>Add supplies for your project with the form above</h4>
-    <% } %>
+<h4 id="supply-header">Project Supply List</h4>
+<div class="supplies">
+    <div class="supplies-container">
+        <div id="supply-form">
+            <form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
+            <label>What is it?</label>
+                <input type="text" name="description" required>
+                <br></br>
+            <label>It is a Tool?</label> 
+                <select name="type" required>
+                    <option value=""></option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select> 
+                <br></br>   
+            <label>Do you already have it?</label>      
+                <select name="own" required>
+                    <option value=""></option>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+                <br></br>
+                <label>How much do you need?</label>
+                    <input type="text" name="amount" required>
+                <br></br>    
+            <button type="submit">Add Item</button>
+            </form>
+            </div>
+        <br></br>
 
+        <div id="supply-list">
+        <% if (project.supplies.length) { %>
+            <table>
+                <h4>Project Supplies</h4>
+                <thead>
+                    <tr>
+                        <th>Description: </th>
+                        <th>Type: </th>
+                        <th>Owned: </th>
+                        <th>Amount: </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% project.supplies.forEach(function(p) { %>
+                        <tr>
+                            <td><%= p.description %></td>
+                            <td><%= p.type %></td>
+                            <td><%= p.own %></td>
+                            <td><%= p.amount %></td>
+                        </tr>
+                <% }) %>
+                </tbody>
+            </table>
+            <% } else { %> 
+            <h4>Add supplies for your project with the form above</h4>
+            <% } %>
+        </div>
+    </div>    
+</div>   
+<br></br> 
 <%- include('../partials/footer') %>
