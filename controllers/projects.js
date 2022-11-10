@@ -50,11 +50,11 @@ function deleteProject(req, res) {
   }
 
 function update(req, res) {
-    Project.updateOne(req.params.id, req.body)
-    console.log('updated', req.body)
-    res.redirect('/projects/library')
+    Project.updateOne({_id:req.params.id}, req.body, function(err, updated) {
+        console.log('updated', updated)
+        res.redirect('/projects/library')
+    })
 }
-
 
 module.exports = {
     index,

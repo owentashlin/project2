@@ -18,10 +18,5 @@ const projectSchema = new Schema({
     supplies: [supplySchema]
 }) 
 
-function updateOne(id, project) {
-    id = parseInt(id)
-    const foundProject =  projects.find((project) => project.id === id)
-    foundProject = project.project
-}
 
 module.exports = mongoose.model('Project', projectSchema)

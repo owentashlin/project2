@@ -5,10 +5,10 @@
 <br></br>
 <form id="update-project-form" action="/<%= project._id %>?_method=PUT" method="POST">
     <label>Project Name:</label>
-        <input type="text" name="name">
+        <input type="text" name="name" required>
         <br></br>
         <label>Method:</label>
-        <select name="type">
+        <select name="type" required>
             <option value=""></option>
             <option value="knit">Knit</option>
             <option value="crochet">Crochet</option>
@@ -17,10 +17,10 @@
         </select>
         <br></br>
         <label>Source:</label>
-        <input type="text" name="sourceLink">
+        <input type="text" name="sourceLink" required>
         <br></br>
         <label>Status:</label>
-        <select name="status">
+        <select name="status" required>
             <option value=""><%= project.status %></option>
             <option value="waiting">Thinking about it...</option>
             <option value="started">Started</option>
