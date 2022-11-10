@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>'Project Library of DOOOOOOOM'</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-   
-</head>
-<body>
-    <ul class="navbar">
-        <img src="../images/noun-sheep-icon.png">
-        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-            <% if (user) { %>
-                <li class="nav-item"><a class="nav-link" href="/private">Bulletin Board</a></li>
-                <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
-              <% } else { %>
-                <li class="nav-item"><a class="nav-link" href="/auth/google">Log In</a></li>
-                <% } %>
-          </ul>
-  <main>
+<%- include('./partials/header') %>
     <p>Welcome to Your Projects!</p>
     <a href="/projects/add">Add a Project</a>
     <br></br>
     <a href="/projects/library">Project Library</a>
-</body>
-</html>
+    <%- include('./partials/footer') %>
