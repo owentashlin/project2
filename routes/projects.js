@@ -11,8 +11,10 @@ router.get('/index', projectsCtrl.index)
 router.get('/projects/add', projectsCtrl.addProject)
 router.get('/projects/library', projectsCtrl.findAll)
 router.get('/projects/:id', projectsCtrl.showDetail)
+router.get('/projects/:id/update', projectsCtrl.showUpdate)
 
 router.post('/', projectsCtrl.create)
 router.delete('/projects/:id', projectsCtrl.deleteProject)
+//router.put('/projects/:id/update', projectsCtrl.update)
 
 module.exports = router;

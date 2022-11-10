@@ -23,3 +23,7 @@ table, th, td {
 i {
   align-self: start;
 }
+
+#cat-gif {
+  align-content: right;
+}

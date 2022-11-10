@@ -10,6 +10,13 @@ function addProject(req, res) {
     res.render('projects/add')
 }
 
+function showUpdate(req, res) {
+    Project.findById(req.params.id, function(err, project) {
+        if (err) console.log('error, cannot retrieve project information')
+        res.render('projects/update', { name: 'Project Name', project })
+    })
+}
+
 function create(req, res) {
     let project = new Project(req.body)
     project.save(function(err){
@@ -39,10 +46,12 @@ function deleteProject(req, res) {
         if (err) return res.setatus(500).send
         else console.log(project)
         })
-    //     res.redirect('projects/library')
-    res.send('project deleted')
+        res.redirect('/projects/library')
   }
 
+function update(req, res) {
+    res.send('project updated')
+}
 
 module.exports = {
     index,
@@ -50,5 +59,7 @@ module.exports = {
     create,
     findAll,
     showDetail,
-    deleteProject
+    deleteProject,
+    showUpdate,
+    update
 }

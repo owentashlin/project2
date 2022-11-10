@@ -7,11 +7,13 @@
             <th><%= project.sourceLink %></th>
         </tr>
     </thead>
-    <tbody>
-        
-    </tbody> 
 </table>
+
 <br></br>
+<a href="/projects/<%= project._id %>/update">Update Project 
+Details</a>
+<br></br>
+
 <h4>Project Supply List</h4>
 <br>
 <form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
@@ -64,6 +66,4 @@
     <h4>Add supplies for your project with the form above</h4>
     <% } %>
 
-</main>
-</body>
-</html>
+<%- include('../partials/footer') %>
