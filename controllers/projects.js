@@ -1,5 +1,6 @@
 // controllers/projects.js
 
+const project = require('../models/project')
 const Project = require('../models/project')
 
 function index(req, res) {
@@ -23,7 +24,6 @@ function create(req, res) {
         if (err) return console.log('error, cannot save new project')
         else res.redirect('projects/library')
     })
-    console.log(req.body)
 }
 
 function findAll(req, res) {
@@ -50,8 +50,11 @@ function deleteProject(req, res) {
   }
 
 function update(req, res) {
-    res.send('project updated')
+    Project.updateOne(req.params.id, req.body)
+    console.log('updated', req.body)
+    res.redirect('/projects/library')
 }
+
 
 module.exports = {
     index,

@@ -1,13 +1,15 @@
 <%- include('../partials/header') %>
 <h2>Update Project</h2>
-
-<form id="update-project-form" action="/" method="POST">
+<br></br>
+<p><%= project.name %></p>
+<br></br>
+<form id="update-project-form" action="/<%= project._id %>?_method=PUT" method="POST">
     <label>Project Name:</label>
-        <input type="text" name="name" value="<%= project.name %>" required>
+        <input type="text" name="name">
         <br></br>
         <label>Method:</label>
-        <select name="type" value="<%= project.type %>" required>
-            <option value=""><%= project.type %></option>
+        <select name="type">
+            <option value=""></option>
             <option value="knit">Knit</option>
             <option value="crochet">Crochet</option>
             <option value="spin">Spin</option>
@@ -15,10 +17,10 @@
         </select>
         <br></br>
         <label>Source:</label>
-        <input type="text" name="sourceLink" value="<%= project.sourceLink %>" required>
+        <input type="text" name="sourceLink">
         <br></br>
         <label>Status:</label>
-        <select name="status" required>
+        <select name="status">
             <option value=""><%= project.status %></option>
             <option value="waiting">Thinking about it...</option>
             <option value="started">Started</option>

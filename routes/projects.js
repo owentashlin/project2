@@ -15,6 +15,6 @@ router.get('/projects/:id/update', projectsCtrl.showUpdate)
 
 router.post('/', projectsCtrl.create)
 router.delete('/projects/:id', projectsCtrl.deleteProject)
-//router.put('/projects/:id/update', projectsCtrl.update)
+router.put('/:id', projectsCtrl.update)
 
 module.exports = router;
