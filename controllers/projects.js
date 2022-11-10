@@ -32,12 +32,23 @@ function showDetail(req, res) {
         if (err) console.log('error, cannot retrieve project information')
         res.render('projects/detail', { name: 'Project Name', project })
     })
+}
+
+function deleteProject(req, res) {
+    Project.deleteOne(req.params.projectId, (err, project) => {
+        if (err) return res.setatus(500).send
+        else console.log(project)
+        })
+    //     res.redirect('projects/library')
+    res.send('project deleted')
   }
+
 
 module.exports = {
     index,
     addProject,
     create,
     findAll,
-    showDetail
+    showDetail,
+    deleteProject
 }

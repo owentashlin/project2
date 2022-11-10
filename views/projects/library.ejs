@@ -7,6 +7,8 @@
             <th>Type:</th>
             <th>Source:</th>
             <th>Status:</th>
+            <th>Project Details: </th>
+            <th>Delete Project: </th>
           </tr>
         </thead>
         <tbody>
@@ -17,6 +19,10 @@
                   <td><%= p.sourceLink %></td>
                   <td><%= p.status %></td>
                   <td><a href="/projects/<%= p._id %>">Project Details</a></td>
+                  <td><form action="/projects/<%= p.id %>?_method=DELETE"
+                    id="delete-form" method="POST">
+                    <button type="submit">X</button>
+                  </form></td>
                 </tr>
             <% }) %>
           </tbody>

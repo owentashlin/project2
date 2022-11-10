@@ -13,5 +13,6 @@ router.get('/projects/library', projectsCtrl.findAll)
 router.get('/projects/:id', projectsCtrl.showDetail)
 
 router.post('/', projectsCtrl.create)
+router.delete('/projects/:id', projectsCtrl.deleteProject)
 
 module.exports = router;
