@@ -1,31 +1,18 @@
 <%- include('../partials/header') %>
-    <h1>Library</h1>
-    <table id="list">
-        <thead>
-          <tr>
-            <th>Project Name:</th>    
-            <th>Type:</th>
-            <th>Source:</th>
-            <th>Status:</th>
-            <th>Project Details: </th>
-            <th>Delete Project: </th>
-          </tr>
-        </thead>
-        <tbody>
-            <% projects.forEach(function(p) { %>
-                <tr>
-                  <td><%= p.name %></td>
-                  <td><%= p.type %></td>
-                  <td><%= p.sourceLink %></td>
-                  <td><%= p.status %></td>
-                  <td><a href="/projects/<%= p._id %>">Project Details</a></td>
-                  <td><form action="/projects/<%= p.id %>?_method=DELETE"
-                    id="delete-form" method="POST">
-                    <button type="submit">X</button>
-                  </form></td>
-                </tr>
-            <% }) %>
-          </tbody>
-        </table>
+    <h1 id="libraryheader" >Library</h1>
+<% projects.forEach(function(p) { %>
+  <div class="card">
+    <div class="container">
+      <h4 id="card-title" ><%= p.name %></h4>
+      <p class="cardp">Type: <%= p.type %></p>
+      <p class="cardp">Status: <%= p.status %></p>
+      <a class="carda" href="/projects/<%= p._id %>">Project Details</a>
+      <form class="cardbutton" action="/projects/<%= p.id %>?_method=DELETE"
+        id="delete-form" method="POST">
+        <button id="delete-button" type="submit">delete project</button>
+      </form>
+    </div>
+  </div>     
+  <% }) %>
 
 <%- include('../partials/footer') %>
