@@ -8,4 +8,4 @@ const stashSchema = new Schema({
     amount: String
 })
 
-module.exports = mongoose.model('Library', stashSchema)
+module.exports = mongoose.model('Stash', stashSchema)

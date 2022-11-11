@@ -1,28 +1,11 @@
 <%- include('../partials/header') %>
-<h2>Project Details</h2>
-
-<div class="detail-card">
-    <div class="container">
-      <h4 id="card-title" ><%= project.name %></h4>
-      <p class="cardp"><a href="<%= project.sourceLink %>">link to source</a></p>
-    </div>
-  </div>     
-
-<br></br>
-<a href="/projects/<%= project._id %>/update">Update Project 
-Details</a>
-<br></br>
-
-<h4 id="supply-header">Need Supplies?</h4>
-<div class="supplies">
-    <div class="supplies-container">
-        <div id="supply-form">
-            <form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
-            <label>Add New Project Supply:</label>
+<h4 id="stash-header">Your Stash</h4>
+<div class="stash">
+    <div class="stash-container">
+        <div id="stash-form">
+            <form method="POST" action="../stash" autocomplete="off">
+            <label>Add New Stash Item:</label>
             <br></br>
-            <label>What is it?</label>
-                <input type="text" name="description" required>
-                <br></br>
             <label>It is a Tool?</label> 
                 <select name="type" required>
                     <option value=""></option>
@@ -30,6 +13,9 @@ Details</a>
                     <option value="false">No</option>
                 </select> 
                 <br></br>   
+            <label>Description</label>
+                <input type="text" name="description" required>
+                <br></br>
             <label>Do you already have it?</label>      
                 <select name="own" required>
                     <option value=""></option>
@@ -45,30 +31,28 @@ Details</a>
             </div>
         <br></br>
         <div id="supply-list">
-        <% if (project.supplies.length) { %>
+        <% if (stash.length) { %>
             <table>
-                <h4>Project Supplies</h4>
+                <h4>Stash Inventory</h4>
                 <thead>
                     <tr>
-                        <th>Description:</th>
                         <th>Type:</th>
-                        <th>Owned:</th>
+                        <th>Description:</th>
                         <th>Amount:</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% project.supplies.forEach(function(p) { %>
+                    <% stash.forEach(function(s) { %>
                         <tr>
-                            <td><%= p.description %></td>
-                            <td><%= p.type %></td>
-                            <td><%= p.own %></td>
-                            <td><%= p.amount %></td>
+                            <td><%= s.type %></td>
+                            <td><%= s.description %></td>
+                            <td><%= s.amount %></td>
                         </tr>
                 <% }) %>
                 </tbody>
             </table>
             <% } else { %> 
-            <h4>Add supplies for your project with the form to the left</h4>
+            <h4>Add items to your stash with the form to the left</h4>
             <% } %>
         </div>
     </div>    
