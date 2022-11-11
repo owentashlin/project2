@@ -3,7 +3,6 @@
 const Project = require('../models/project')
 
 function create(req, res) {
-   //res.send('project updated')
     Project.findById(req.params.id, function(err, project) {
       console.log(req.body)
       project.supplies.push(req.body)      

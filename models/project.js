@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-
 const Schema = mongoose.Schema
 
 const supplySchema = new Schema({
@@ -7,7 +6,6 @@ const supplySchema = new Schema({
     description: String,
     own: Boolean,
     amount: String
-    
 })
 
 const projectSchema = new Schema({

@@ -13,11 +13,13 @@
 Details</a>
 <br></br>
 
-<h4 id="supply-header">Project Supply List</h4>
+<h4 id="supply-header">Need Supplies?</h4>
 <div class="supplies">
     <div class="supplies-container">
         <div id="supply-form">
             <form method="POST" action="../projects/<%= project._id %>/supplies" autocomplete="off">
+            <label>Add New Project Supply:</label>
+            <br></br>
             <label>What is it?</label>
                 <input type="text" name="description" required>
                 <br></br>
@@ -42,17 +44,16 @@ Details</a>
             </form>
             </div>
         <br></br>
-
         <div id="supply-list">
         <% if (project.supplies.length) { %>
             <table>
                 <h4>Project Supplies</h4>
                 <thead>
                     <tr>
-                        <th>Description: </th>
-                        <th>Type: </th>
-                        <th>Owned: </th>
-                        <th>Amount: </th>
+                        <th>Description:</th>
+                        <th>Type:</th>
+                        <th>Owned:</th>
+                        <th>Amount:</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,7 +68,7 @@ Details</a>
                 </tbody>
             </table>
             <% } else { %> 
-            <h4>Add supplies for your project with the form above</h4>
+            <h4>Add supplies for your project with the form to the left</h4>
             <% } %>
         </div>
     </div>    
