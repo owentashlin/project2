@@ -6,58 +6,58 @@ This application allows the user to make a custom library of projects from outsi
 **SCREEN SHOTS**
 
 ![home after logging in](/public/images/screenshots/home.png)
-*home page*
+- *home page*
 
 ![bulletin board](/public/images/screenshots/bulletin-board.png)
-*bulletin board*
+- *bulletin board*
 
 ![add a project page](/public/images/screenshots/add.png)
-*add project*
+- *add project*
 
 ![library page](/public/images/screenshots/library.png)
-*projects library*
+- *projects library*
 
 ![project detail](/public/images/screenshots/detail.png)
-*project detail*
+- *project detail*
 
 ![stash page](/public/images/screenshots/stash.png)
-*stash add and inventory*
+- *stash add and inventory*
 
 **TECHNOLOGIES USED**
-MongoDB Atlas
-Mongoose
-Express
-NodeJS
-EJS
-JavaScript
-HTML
-CSS
-Google OAuth
-Trello
+- MongoDB Atlas
+- Mongoose
+- Express
+- NodeJS
+- EJS
+- JavaScript
+- HTML
+- CSS
+- Google OAuth
+- Trello
 
 **TRELLO PLANNING BOARD**
-https://trello.com/b/MpVQUErI/project-2-planning
+- https://trello.com/b/MpVQUErI/project-2-planning
 
 
 **GETTING STARTED**
-link to come in the future once we are able to deploy...
+- link to come in the future once we are able to deploy...
 
 **NEXT STEPS**
-Add additional funcitonality to the Stash, as well as integrate views of user's current inventory to project views (allowing for fewer clicks back and forth). 
+- Add additional funcitonality to the Stash, as well as integrate views of user's current inventory to project views (allowing for fewer clicks back and forth). 
 
-add view of projects with the tag "current" to display on the home page, so users can have quick access to source materials for the project.
+- add view of projects with the tag "current" to display on the home page, so users can have quick access to source materials for the project.
 
-add thumbnails and image support for projects.
+- add thumbnails and image support for projects.
 
 **IMAGE CREDITS**
-unicornllama.png: https://www.clipartmax.com/max/m2H7d3d3b1Z5N4b1/
-    *#kawaii #llama #llamacorn Dedicated To @kandygamergirl* 
+- unicornllama.png: https://www.clipartmax.com/max/m2H7d3d3b1Z5N4b1/
+    - *#kawaii #llama #llamacorn Dedicated To @kandygamergirl* 
 
-noun-sheep-icon.png: https://thenounproject.com/icon/sheep-1073872/
-    *used under creative commons license, artist Symbolon, found on the Noun Project*
+- noun-sheep-icon.png: https://thenounproject.com/icon/sheep-1073872/
+    - *used under creative commons license, artist Symbolon, found on the Noun Project*
 
-back-drop-small-copy.png: https://thenounproject.com/browse/collection-icon/tailor-62749/?p=1 
-    *used under creative commons license, artist Kokota, found on the Noun Project*
+- back-drop-small-copy.png: https://thenounproject.com/browse/collection-icon/tailor-62749/?p=1 
+    - *used under creative commons license, artist Kokota, found on the Noun Project*
 
 
 
