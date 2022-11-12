@@ -129,6 +129,7 @@ p {
   font-weight: bold;
   font-size: 16px;
   background-color: #b1caa7;
+  padding: 3px;
 }
 
 .button:hover {
