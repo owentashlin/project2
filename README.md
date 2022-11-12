@@ -23,19 +23,41 @@ This application allows the user to make a custom library of projects from outsi
 ![stash page](/public/images/screenshots/stash.png)
 *stash add and inventory*
 
+**TECHNOLOGIES USED**
+MongoDB Atlas
+Mongoose
+Express
+NodeJS
+EJS
+JavaScript
+HTML
+CSS
+Google OAuth
+Trello
+
+**TRELLO PLANNING BOARD**
+https://trello.com/b/MpVQUErI/project-2-planning
 
 
+**GETTING STARTED**
+link to come in the future once we are able to deploy...
 
+**NEXT STEPS**
+Add additional funcitonality to the Stash, as well as integrate views of user's current inventory to project views (allowing for fewer clicks back and forth). 
+
+add view of projects with the tag "current" to display on the home page, so users can have quick access to source materials for the project.
+
+add thumbnails and image support for projects.
 
 **IMAGE CREDITS**
 unicornllama.png: https://www.clipartmax.com/max/m2H7d3d3b1Z5N4b1/
-    "#kawaii #llama #llamacorn Dedicated To @kandygamergirl - Cat Unicorn Coloring Pages is a (1024x1459) png clipart image which is manually selected and technically optimized. This transparent clipart, 1633KB, is about clipartmax.com. #kawaii #llama #llamacorn Dedicated To @kandygamergirl" 
+    *#kawaii #llama #llamacorn Dedicated To @kandygamergirl* 
 
 noun-sheep-icon.png: https://thenounproject.com/icon/sheep-1073872/
-    - used under creative commons license, artist Symbolon, found on the Noun Project
+    *used under creative commons license, artist Symbolon, found on the Noun Project*
 
 back-drop-small-copy.png: https://thenounproject.com/browse/collection-icon/tailor-62749/?p=1 
-    - used under creative commons license, artist Kokota, found on the Noun Project
+    *used under creative commons license, artist Kokota, found on the Noun Project*
 
 
 
