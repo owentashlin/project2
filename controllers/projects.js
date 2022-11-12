@@ -1,6 +1,4 @@
 // controllers/projects.js
-
-const project = require('../models/project')
 const Project = require('../models/project')
 
 function index(req, res) {
