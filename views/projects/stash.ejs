@@ -30,5 +30,33 @@
             </form>
             </div>
         <br></br>
-        
+        <div id="stash-list">
+            <% if (stashes.length) { %>
+                <table>
+                    <h4>Stash Inventory</h4>
+                    <thead>
+                        <tr>
+                            <th>Type:</th>
+                            <th>Description:</th>
+                            <th>Amount:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% stashes.forEach(function(s) { %>
+                            <tr>
+                                <td><%= s.type %></td>
+                                <td><%= s.description %></td>
+                                <td><%= s.amount %></td>
+                            </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %> 
+                <h4>Add items to your stash with the form to the left</h4>
+                <% } %>
+            </div>
+        </div>    
+    </div>   
+    <br></br> 
+    
 <%- include('../partials/footer') %>
