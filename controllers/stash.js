@@ -1,16 +1,22 @@
 const Stash = require('../models/stash')
+const User = require('../models/user')
 
 function show(req, res) {
     res.render('projects/stash')
 }
 
-function update(req, res) {
-    //res.send('stash updated')
-    let stash = new Stash(req.body)
-    stash.save(function(err){
-        if (err) return console.log('error, cannot save stash item')
-        else res.redirect('/projects/stash')
-    })
+async function update(req, res) {
+    try{
+        let stash = new Stash(req.body)
+        let user = await User.findById(req.body.user)
+        user.stash.push(stash)
+        await user.save()
+        await stash.save()
+        res.redirect('/projects/stash')
+    }
+    catch(err){
+        console.log(err)
+    }
 }
 
 
