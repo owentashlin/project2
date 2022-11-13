@@ -13,7 +13,8 @@ const projectSchema = new Schema({
     type: String,
     sourceLink: String,
     status: String,
-    supplies: [supplySchema]
+    supplies: [supplySchema],
+    user: {type: mongoose.Schema.Types.ObjectId, ref:'User'}
 }) 
 
 

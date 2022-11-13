@@ -10,8 +10,11 @@ const userSchema = new Schema(
     },
     email: String,
     avatar: String,
+    projects: [{type: mongoose.Schema.Types.ObjectId, ref:'Project'}],
+    stash: [{type: mongoose.Schema.Types.ObjectId, ref:'Stash'}]
   },
   { timeStamps: true }
+
 );
 
 module.exports = mongoose.model("User", userSchema);
