@@ -32,10 +32,13 @@ async function create(req, res) {
 }
 
 function findAll(req, res) {
-    Project.find({}, function(err, projects) {
-        if (err) console.log('error, cannot retrieve project information')
-        console.log('findAll', projects)
-        res.render('projects/library', { projects })
+    let projectQuery = req.query._id ? {_id: new RegExp(req.query._id, "i")} : {}
+    Project.find(projectQuery, function(err, projects) {
+        res.render('projects/library', {
+            projects,
+            user: req.user,
+            _idSearch: req.query._id
+        })
     })
 }
 
