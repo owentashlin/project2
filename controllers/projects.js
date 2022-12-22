@@ -39,6 +39,7 @@ function findAll(req, res) {
             user: req.user,
             _idSearch: req.query._id
         })
+        console.log(projects)
     })
 }
 
